@@ -31,3 +31,36 @@ D:\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\refint\dotnet-core.dll
 D:\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.pdb
 D:\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.genruntimeconfig.cache
 D:\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\ref\dotnet-core.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.csproj.AssemblyReference.cache
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.GeneratedMSBuildEditorConfig.editorconfig
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.AssemblyInfoInputs.cache
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.AssemblyInfo.cs
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.csproj.CoreCompileInputs.cache
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.MvcApplicationPartsAssemblyInfo.cs
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.MvcApplicationPartsAssemblyInfo.cache
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\refint\dotnet-core.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.pdb
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\appsettings.Development.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\appsettings.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.exe
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.deps.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.runtimeconfig.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.pdb
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets\msbuild.dotnet-core.Microsoft.AspNetCore.StaticWebAssets.props
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets\msbuild.build.dotnet-core.props
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.dotnet-core.props
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.dotnet-core.props
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets.pack.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets.build.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\staticwebassets.development.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\scopedcss\bundle\dotnet-core.styles.css
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.csproj.CopyComplete
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.genruntimeconfig.cache
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\ref\dotnet-core.dll

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using dotnet_core.Models;
+using dotnet_core.Interface;
+
 namespace dotnet_core.Controllers;
 
 [ApiController]
@@ -9,61 +11,47 @@ namespace dotnet_core.Controllers;
 public class TasksController : ControllerBase
 {
 
-    private List<Tasks> arr;
-    public TasksController()
+    private ITasksService tasksService;
+    public TasksController(ITasksService tasksService)
     {
-        arr = new List<Tasks>
-        {
-            new Tasks { Id = 1, Name = "moshe", Description = "to do homework", perform = false },
-            new Tasks { Id = 2, Name = "Yaakov", Description = "go work", perform = false },
-            new Tasks { Id = 3, Name = "Ysrael", Description = "go for a walk", perform = true }
-        };
+        this.tasksService = tasksService;
 
     }
 
     [HttpGet]
-    public IEnumerable<Tasks> Get()
+    public ActionResult<IEnumerable<Tasks>> Get()
     {
-        return arr;
+        return tasksService.GetAll();
     }
 
     [HttpGet("{id}")]
-    public Tasks Get(int id)
+    public ActionResult<Tasks> Get(int id)
     {
-        return arr.FirstOrDefault(t => t.Id == id);
+        var task = tasksService.Get(id);
+        if (task == null)
+            return NotFound();
+        return Ok(task);
     }
 
     [HttpPost]
-    public int Post(Tasks newTasks)
+    public IActionResult Post(Tasks newTask)
     {
-        int max = arr.Max(p => p.Id);
-        newTasks.Id = max + 1;
-        arr.Add(newTasks);
-        return newTasks.Id;
+        var newId = tasksService.Post(newTask);
+        return CreatedAtAction(nameof(Post), new { id = newId }, newTask);
     }
 
     [HttpPut("{id}")]
-    public void Put(int id, Tasks newTasks)
+    public ActionResult Put(int id, Tasks newTask)
     {
-        if (id == newTasks.Id)
-        {
-            var tasks = arr.Find(p => p.Id == id);
-            if (tasks != null)
-            {
-                int index = arr.IndexOf(tasks);
-                arr[index] = newTasks;
-            }
-        }
+        tasksService.Put(id, newTask);
+        return Ok();
     }
 
     [HttpDelete("{id}")]
-    public void Delete(int id)
+    public ActionResult Delete(int id)
     {
-        var tasks = arr.Find(p => p.Id == id);
-        if (tasks != null)
-        {
-            arr.Remove(tasks);
-        }
+        tasksService.Delete(id);
+        return Ok();
     }
 }
 
