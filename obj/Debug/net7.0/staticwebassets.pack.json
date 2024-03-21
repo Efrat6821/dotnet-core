@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.dotnet-core.props",
+      "PackagePath": "build\\dotnet-core.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.dotnet-core.props",
+      "PackagePath": "buildMultiTargeting\\dotnet-core.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.dotnet-core.props",
+      "PackagePath": "buildTransitive\\dotnet-core.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.dotnet-core.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

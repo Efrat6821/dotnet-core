@@ -1,28 +1,39 @@
 using dotnet_core.Models;
 using dotnet_core.Interface;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
+using System;
+using System.Net;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
 
 namespace dotnet_core.Service;
 
 
 public class TasksService : ITasksService
 {
-    private List<Tasks> arr;
-   public TasksService()
+    // private List<Tasks> arr;
+    public List<Tasks> arr { get; }
+    private string filePath;
+
+    public TasksService(IWebHostEnvironment webHost)
     {
-        arr = new List<Tasks>
+        this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "Tasks.json");
+        using (var jsonFile = File.OpenText(filePath))
         {
-            new Tasks { Id = 1, Name = "moshe", Description = "to do homework", Perform = false },
-            new Tasks { Id = 2, Name = "Yaakov", Description = "go work", Perform = false },
-            new Tasks { Id = 3, Name = "Ysrael", Description = "go for a walk", Perform = true }
-        };
+            arr = JsonSerializer.Deserialize<List<Tasks>>(jsonFile.ReadToEnd());
+        }
+    }
+
+    private void saveToFile()
+    {
+        File.WriteAllText(filePath, JsonSerializer.Serialize(arr));
     }
 
     public List<Tasks> GetAll() => arr;
 
-    public Tasks Get(int id)
-    {
-        return arr.FirstOrDefault(t => t.Id == id);
-    }
+    public Tasks Get(int id) => arr.FirstOrDefault(t => t.Id == id);
 
 
     public int Post(Tasks newTask)
@@ -30,6 +41,7 @@ public class TasksService : ITasksService
         int max = arr.Max(p => p.Id);
         newTask.Id = max + 1;
         arr.Add(newTask);
+        saveToFile();
         return newTask.Id;
     }
 
@@ -44,6 +56,7 @@ public class TasksService : ITasksService
                 arr[index] = newTask;
             }
         }
+        saveToFile();
     }
     public void Delete(int id)
     {
@@ -52,5 +65,6 @@ public class TasksService : ITasksService
         {
             arr.Remove(task);
         }
+        saveToFile();
     }
 }
