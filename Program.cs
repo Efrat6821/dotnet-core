@@ -1,5 +1,5 @@
 using dotnet_core.Utilities;
-
+using MyMiddleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,6 +22,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
+app.UseMyLogMiddleware();
 
 app.UseAuthorization();
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lu93oXQs8KMLw+y2Scuw1FxFqh+KmQcTLVKJLF6B5mA=",
+  "Hash": "6SaHCRmsTDx0Qh0NTzbIqzk0jUpBn0V8W33sMxuVzpc=",
   "Source": "dotnet-core",
   "BasePath": "_content/dotnet-core",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "dotnet-core\\wwwroot",
       "Source": "dotnet-core",
-      "ContentRoot": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
+      "ContentRoot": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
       "BasePath": "_content/dotnet-core",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\css\\site.css",
+      "Identity": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\css\\site.css",
       "SourceId": "dotnet-core",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
+      "ContentRoot": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
       "BasePath": "_content/dotnet-core",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\index.html",
+      "Identity": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\index.html",
       "SourceId": "dotnet-core",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
+      "ContentRoot": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
       "BasePath": "_content/dotnet-core",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\js\\site.js",
+      "Identity": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\js\\site.js",
       "SourceId": "dotnet-core",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
+      "ContentRoot": "D:\\System Volume Information\\אפרת\\זילברברג\\dotnet-core\\wwwroot\\",
       "BasePath": "_content/dotnet-core",
       "RelativePath": "js/site.js",
       "AssetKind": "All",

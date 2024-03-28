@@ -99,3 +99,5 @@ E:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net
 E:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\dotnet-core.genruntimeconfig.cache
 E:\System Volume Information\אפרת\זילברברג\dotnet-core\obj\Debug\net7.0\ref\dotnet-core.dll
 E:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.staticwebassets.runtime.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\Data\Tasks.json
+D:\System Volume Information\אפרת\זילברברג\dotnet-core\bin\Debug\net7.0\dotnet-core.staticwebassets.runtime.json
