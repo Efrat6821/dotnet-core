@@ -33,6 +33,8 @@ public class TasksService : ITasksService
 
     public List<Tasks> GetAll() => arr;
 
+     public List<Tasks> GetAllByUser(int userId, string userName) => arr.Where(t => t.UserId == userId).ToList();
+
     public Tasks Get(int id) => arr.FirstOrDefault(t => t.Id == id);
 
 
@@ -67,4 +69,10 @@ public class TasksService : ITasksService
         }
         saveToFile();
     }
+
+    public List<Tasks> GetAllByUser()
+    {
+        throw new NotImplementedException();
+    }
+
 }

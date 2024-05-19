@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using dotnet_core.Models;
 using dotnet_core.Interface;
+using Microsoft.AspNetCore.Authorization;
 
 namespace dotnet_core.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-
 
 public class TasksController : ControllerBase
 {
@@ -18,22 +18,38 @@ public class TasksController : ControllerBase
 
     }
 
-    [HttpGet]
+    [HttpGet(Name = "GetAllTasks")]
+    [Authorize(Policy = "Admin")]
     public ActionResult<IEnumerable<Tasks>> Get()
     {
         return tasksService.GetAll();
     }
 
-    [HttpGet("{id}")]
-    public ActionResult<Tasks> Get(int id)
+    [HttpGet("user/{userId}", Name = "GetAllTasksByUser")]
+    [Authorize(Policy = "User")]
+    public ActionResult<IEnumerable<Tasks>> Get(int userId)
     {
-        var task = tasksService.Get(id);
-        if (task == null)
-            return NotFound();
-        return Ok(task);
+        return tasksService.GetAllByUser(userId, "");
+    }
+
+
+    [HttpGet("{id, userId}", Name = "GetTaskById")]
+    [Authorize(Policy = "User")]
+    public ActionResult<Tasks> Get(int id, int userId)
+    {
+        var tasks = tasksService.GetAllByUser(userId, "");
+        if (tasks != null)
+        {
+            var task = tasksService.Get(id);
+            if (task == null)
+                return NotFound();
+            return Ok(task);
+        }
+        return NotFound();
     }
 
     [HttpPost]
+    [Authorize(Policy = "User")]
     public IActionResult Post(Tasks newTask)
     {
         var newId = tasksService.Post(newTask);
@@ -41,6 +57,7 @@ public class TasksController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Policy = "User")]
     public ActionResult Put(int id, Tasks newTask)
     {
         tasksService.Put(id, newTask);
@@ -48,6 +65,7 @@ public class TasksController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Policy = "User")]
     public ActionResult Delete(int id)
     {
         tasksService.Delete(id);

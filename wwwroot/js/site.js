@@ -18,7 +18,7 @@ function addItem() {
         description: addDescriptionTextbox.value.trim(),
         perform: false
     };
-    fetch(uri, {
+    fetch((uri), {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

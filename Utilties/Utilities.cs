@@ -9,5 +9,9 @@ namespace dotnet_core.Utilities
         {
             services.AddSingleton<ITasksService, TasksService>();
         }
+          public static void AddUser(this IServiceCollection services)
+        {
+            services.AddSingleton<IUsersService, UsersService>();
+        }
     }
 }
