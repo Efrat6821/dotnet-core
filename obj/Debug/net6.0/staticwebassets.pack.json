@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\USER\\Desktop\\dotnet-core\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\USER\\Desktop\\dotnet-core\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\dotnet-core\\wwwroot\\js\\tasks.js",
+      "PackagePath": "staticwebassets\\js\\tasks.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\dotnet-core\\wwwroot\\js\\users.js",
+      "PackagePath": "staticwebassets\\js\\users.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\dotnet-core\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\dotnet-core\\wwwroot\\user.html",
+      "PackagePath": "staticwebassets\\user.html"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.dotnet-core.props",

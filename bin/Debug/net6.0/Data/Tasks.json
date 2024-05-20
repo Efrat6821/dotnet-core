@@ -23,7 +23,7 @@
     {
         "Id": 7,
         "Name": "michal",
-        "Description": "sleep",
+        "Description": "sleep now",
         "Perform": false,
         "UserId": 2
     },
@@ -42,17 +42,24 @@
         "UserId": 0
     },
     {
-        "Id": 16,
-        "Name": "tgwsza",
-        "Description": "ujyhtg",
-        "Perform": true,
-        "UserId": 2
-    },
-    {
         "Id": 17,
         "Name": "nomi",
         "Description": "svdv",
         "Perform": true,
         "UserId": 2
+    },
+    {
+        "Id": 18,
+        "Name": "michal",
+        "Description": "to go shoping",
+        "Perform": true,
+        "UserId": 2
+    },
+    {
+        "Id": 19,
+        "Name": "efrat",
+        "Description": "to go shoping",
+        "Perform": true,
+        "UserId": 1
     }
 ]

@@ -6,6 +6,7 @@ using dotnet_core.Interface;
 // using System;
 // using System.Net;
 using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 // using Microsoft.AspNetCore.Hosting;
 
 namespace dotnet_core.Service;
@@ -41,11 +42,11 @@ public class UsersService : IUsersService
     public User Get(int id) => arr.FirstOrDefault(u => u.Id == id);
 
 
-    public int Post(User newUser)
+    public int Post([FromBody] User newUser)
     {
+
         int max = arr.Max(p => p.Id);
-        newUser.Id = max + 1;
-        // console.log(newUser);
+        newUser.Id = max+1;
         arr.Add(newUser);
         saveToFile();
         return newUser.Id;

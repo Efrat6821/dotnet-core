@@ -16,5 +16,11 @@
         "Name": "michal",
         "IsAdmin": false,
         "Password": "poli"
+    },
+    {
+        "Id": 3,
+        "Name": "libi",
+        "IsAdmin": false,
+        "Password": "lev"
     }
 ]
