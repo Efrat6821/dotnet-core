@@ -1,26 +1,14 @@
 [
     {
-        "Id": 0,
-        "Name": null,
-        "IsAdmin": null,
-        "Password": null
-    },
-    {
-        "Id": 1,
-        "Name": "efrat",
+        "Id": 1454,
+        "Name": "libi levi",
         "IsAdmin": true,
-        "Password": "grinboim"
+        "Password": "lib789"
     },
     {
-        "Id": 2,
-        "Name": "michal",
+        "Id": 1453,
+        "Name": "libi levin",
         "IsAdmin": false,
-        "Password": "poli"
-    },
-    {
-        "Id": 3,
-        "Name": "libi",
-        "IsAdmin": false,
-        "Password": "lev"
+        "Password": "lib798"
     }
 ]

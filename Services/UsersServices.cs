@@ -41,12 +41,21 @@ public class UsersService : IUsersService
 
     public User Get(int id) => arr.FirstOrDefault(u => u.Id == id);
 
+    public int GenerateIDFromPassword(string password)
+    {
+        int id = 0;
+        int i = 1;
+        foreach (char c in password)
+        {
+            id += (int)c * i;
+            i++;
+        }
+        return id;
+    }
 
     public int Post([FromBody] User newUser)
     {
-
-        int max = arr.Max(p => p.Id);
-        newUser.Id = max+1;
+        newUser.Id = GenerateIDFromPassword(newUser.Password);
         arr.Add(newUser);
         saveToFile();
         return newUser.Id;

@@ -151,6 +151,10 @@ if (!token) {
 }
 
 const tokenObj = JSON.parse(token);
+
+const h1 = document.getElementById("h1");
+h1.innerHTML = `Hello ${tokenObj.name}`;
+
 let tokenPayload;
 document.addEventListener("DOMContentLoaded", function () {
     const tokenParts = tokenObj.token.split('.');
@@ -166,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 );
 function getItems() {
-    fetch(uri, {
+    fetch(`${uri}/user/${tokenObj.id}`, {
         headers: {
             'Accept': 'application/json',
             'Authorization': `Bearer ${tokenObj.token}`
@@ -188,11 +192,13 @@ function getItems() {
 
 
 function addItem() {
-    const addNameTextbox = document.getElementById('add-name');
+    const addDescriptionTextbox = document.getElementById('add-description');
     const item = {
-        userId: tokenObj.id,
-        isCompleted: false,
-        name: addNameTextbox.value.trim(),
+        Id: 0,
+        Name: tokenObj.name,
+        UserId: tokenObj.id,
+        Perform: false,
+        Description: addDescriptionTextbox.value.trim(),
     };
     fetch(uri, {
         method: 'POST',
@@ -206,8 +212,7 @@ function addItem() {
         .then(response => response.json())
         .then(() => {
             getItems();
-            addNameTextbox.value = '';
-            // addhourTextbox.value = '';
+            addDescriptionTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -228,19 +233,20 @@ function deleteItem(id) {
 function displayEditForm(id) {
     const item = tasks.find(item => item.id === id);
 
-    document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-isCompleted').checked = item.isCompleted;
+    document.getElementById('edit-description').value = item.description;
+    document.getElementById('edit-perform').checked = item.perform;
     document.getElementById('editForm').style.display = 'block';
 }
 
 function updateItem() {
     const itemId = document.getElementById('edit-id').value;
+    console.log(itemId);
     const item = {
-        id: parseInt(itemId, 10),
-        isCompleted: document.getElementById('edit-isCompleted').checked,
-        name: document.getElementById('edit-name').value.trim(),
-
+        Id: parseInt(itemId, 10),
+        Perform: document.getElementById('edit-perform').checked,
+        Description: document.getElementById('edit-description').value.trim(),
+        Name: tokenObj.name,
+        UserId: tokenObj.id
     };
 
     fetch(`${uri}/${itemId}`, {
@@ -256,6 +262,7 @@ function updateItem() {
         .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
+    getItems();
 
     return false;
 }
@@ -309,15 +316,15 @@ function _displayItems(data) {
 
 
 
-
+    const tBody = document.getElementById('Tasks');
     tBody.innerHTML = '';
     data.forEach(task => {
-        if (task.userId == tokenObj.id) {
+        console.log(task);
             const button = document.createElement('button');
             let isComplitedCheckbox = document.createElement('input');
             isComplitedCheckbox.type = 'checkbox';
             isComplitedCheckbox.disabled = true;
-            isComplitedCheckbox.checked = task.isCompleted;
+            isComplitedCheckbox.checked = task.perform;
 
 
             let editButton = button.cloneNode(false);
@@ -334,7 +341,7 @@ function _displayItems(data) {
             td1.appendChild(isComplitedCheckbox);
 
             let td2 = tr.insertCell(1);
-            let textNode = document.createTextNode(task.name);
+            let textNode = document.createTextNode(task.description);
             td2.appendChild(textNode);
 
             let td4 = tr.insertCell(2);
@@ -342,10 +349,8 @@ function _displayItems(data) {
 
             let td5 = tr.insertCell(3);
             td5.appendChild(deleteButton);
-
-
-    }
     });
+    tasks = data;
 }
 function getAllTasksToAdmin(data) {
     const tBody = document.getElementById('Tasks');
