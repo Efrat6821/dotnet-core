@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W1eA41HQplXmHji0nLDMTB5OcTyo6WHh/jh/l8PP6g4=",
+  "Hash": "ukrC0GmuHDgkdbO5H5U1ocE2vNfxXGlXTSna37H18ys=",
   "Source": "dotnet-core",
   "BasePath": "_content/dotnet-core",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\project .Net Core\\dotnet-core\\wwwroot\\tasksAllUsers.html",
+      "SourceId": "dotnet-core",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\project .Net Core\\dotnet-core\\wwwroot\\",
+      "BasePath": "_content/dotnet-core",
+      "RelativePath": "tasksAllUsers.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tasksAllUsers.html"
     },
     {
       "Identity": "C:\\Users\\user1\\Desktop\\project .Net Core\\dotnet-core\\wwwroot\\user.html",

@@ -62,6 +62,7 @@
     <title>List To Do CRUD</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
+
 <body>
     <h1 id="h1"></h1>
     <h3>Add</h3>
@@ -74,7 +75,7 @@
 
     <div id="editForm">
         <h3>Edit</h3>
-        <form action="javascript:void(0);"   onsubmit="updateItem()">
+        <form action="javascript:void(0);" onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
             <input type="hidden" id="edit-userId">
             <input type="hidden" id="edit-name">
@@ -103,9 +104,9 @@
     <a href="./tasksAllUsers.html" id="aTasksForAdmin" style="display: none;">לניהול כלל המשימות</a>
     <script src="js/tasks.js" asp-append-version="true"></script>
     <script type="text/javascript">
-        getItems();
+        getItemsAll();
 
     </script>
 </body>
 
-</html> 
+</html>

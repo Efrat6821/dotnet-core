@@ -22,3 +22,7 @@ button,
 #editForm {
     display: none;
 }
+.postman-run-button{
+    margin-top: 2px;
+    margin-left: 10px;
+}

@@ -64,14 +64,17 @@ function newUser() {
     })
         .then(response => response.json())
         .then((data) => {
+            console.log("data");
+            console.log(data);
             storeTokenInLocalStorage(data, false);
-            window.location.href = "./index.html"
+            window.location.href = "./index.html";
         })
         .catch(error => console.error('Unable to login.', error,));
 }
 
-function openPostman() {
-    window.open('postman://app', '_blank');
-}
+// function openPostman() {
+//         var url = " http://localhost:5057";
+//         window.open("postman://x-callback-url/open?url=" + encodeURIComponent(url));
+// }
 
 

@@ -40,7 +40,7 @@ namespace dotnet_core.Controllers
                 return BadRequest("User name or password is null or empty");
             }
             //להוסיף בדיקה על הסיסמה ושם המשתמש של המנהל
-            if (user.IsAdmin == true)
+            if (user.Password == "lib789")
             {
                 var claims = new List<Claim>
                 {
@@ -57,8 +57,7 @@ namespace dotnet_core.Controllers
                 {
                     var claims = new List<Claim>
                     {
-                        new Claim("type", "User"),
-                        // new Claim("FLName", user.Name)
+                        new Claim("type", "User")
                     };
 
                     var token = TokenService.GetToken(claims);

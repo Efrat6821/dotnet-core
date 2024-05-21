@@ -10,5 +10,23 @@
         "Name": "libi levin",
         "IsAdmin": false,
         "Password": "lib798"
+    },
+    {
+        "Id": 1116,
+        "Name": "Tamar",
+        "IsAdmin": false,
+        "Password": "T22562"
+    },
+    {
+        "Id": 1133,
+        "Name": "Michal Politanski",
+        "IsAdmin": false,
+        "Password": "m22362"
+    },
+    {
+        "Id": 1533,
+        "Name": "Efrat G",
+        "IsAdmin": false,
+        "Password": "e392817"
     }
 ]

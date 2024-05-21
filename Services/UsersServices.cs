@@ -69,6 +69,8 @@ public class UsersService : IUsersService
             if (user != null)
             {
                 int index = arr.IndexOf(user);
+                if (arr[index].Password != newUser.Password)
+                    newUser.Id = GenerateIDFromPassword(newUser.Password);
                 arr[index] = newUser;
             }
         }

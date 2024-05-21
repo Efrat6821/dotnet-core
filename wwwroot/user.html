@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -10,10 +10,8 @@
     <h1>Users CRUD</h1>
     <h3>Add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="add-id" placeholder="Id">
         <input type="text" id="add-username" placeholder="UserName">
-        <input type="text" id="add-name" placeholder="Phone">
-        <input type="text" id="add-Phone" placeholder="Name">
+        <input type="text" id="add-Password" placeholder="Password">
         <input type="submit" value="Add">
     </form>
 
@@ -21,9 +19,8 @@
         <h3>Edit</h3>
         <form action="javascript:void(0);"   onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
-            <input type="text" id="edit-Username">
-            <input type="text" id="edit-name">
-            <input type="text" id="edit-Phone">
+            <input type="text" id="edit-username">
+            <input type="text" id="edit-uassword">
             <input type="submit" value="Save">
             <a onclick="closeInput()" aria-label="Close">&#10006;</a>
         </form>
@@ -35,16 +32,123 @@
         <tr>
             <th>Id</th>
             <th>UserName</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th></th>
+            
         </tr>
         <tbody id="Users"></tbody>
     </table>
-    <script src="js/users.js" asp-append-version="true"></script>
+    <script src="/js/users.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getUsers();
+    </script>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task list</title>
+    <link rel="stylesheet" href="./css//site.css">
+</head>
+
+<body>
+    <h1>hello</h1>
+
+
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="name">
+        <input type="text" id="add-description" placeholder="description">
+
+        <input type="checkbox" id="add-perform" placeholder="perform">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <input type="checkbox" id="edit-isPerform">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-description">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>Perform</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="tasks"></tbody>
+    </table>
+
+    <script src="./js//site.js" asp-append-version="true"></script>
     <script type="text/javascript">
         getItems();
     </script>
 </body>
 
-</html>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>List To Do CRUD</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Users CRUD</h1>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-username" placeholder="UserName">
+        <input type="text" id="add-password" placeholder="Password">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);"   onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-username" placeholder="UserName">
+            <input type="text" id="edit-password" placeholder="Password">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+    
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>UserName</th>
+            <th></th>
+            <th></th>
+            
+        </tr>
+        <tbody id="Users"></tbody>
+    </table>
+    
+    <a href="./user.html" id="aUsersForAdmin">לניהול משתמשים</a>
+    <a href="./tasksAllUsers.html" id="aTasksForAdmin">לניהול כלל המשימות</a>
+   
+    <script src="js/users.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+
+    </script>
+</body>
+
+</html> 
